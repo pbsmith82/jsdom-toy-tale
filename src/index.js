@@ -22,6 +22,7 @@ const toyImageContainer = document.querySelector("#toy-collection")
 function createCard(object){
   const card = document.createElement('div')
     card.className = "card"
+    card.id = object.id
     card.innerHTML = `<img src="${object.image}" class="toy-avatar"> <br> ID: ${object.id} <br> Name: ${object.name} <br> Likes: ${object.likes}` 
     toyImageContainer.append(card)
 }
@@ -64,7 +65,45 @@ function createCard(object){
       }).then(function(object) {
         createCard(object)
     
-  })
-  
+  })  
 })
+ const cardid = document.querySelector("#toy-collection")
+ cardid.addEventListener("click", (e) => {
+  fetch(toyUrl + `/${e.target.parentElement.id}`)
+  .then(function(response){
+    return response.json()
+  }).then(function(json){
+     increaseLikes(json)
+  })
+  function increaseLikes(object){
+    let formData = {
+      name: object.name,
+      image: object.image,
+      likes: parseInt(object.likes) + 1 
+    };
+    
+    let configData = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formData)
+    };
+  
+  
+  
+  
+    fetch(toyUrl + `/${object.id}`, configData)
+      .then(function(response) {
+        return response.json();
+      }).then(function(object) {
+        const updateCard = document.getElementById(object.id) 
+        updateCard.innerHTML = `<img src="${object.image}" class="toy-avatar"> <br> ID: ${object.id} <br> Name: ${object.name} <br> Likes: ${object.likes}`
+    
+  })  
+
+  }
+  
+ })
 })
