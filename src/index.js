@@ -23,7 +23,7 @@ function createCard(object){
   const card = document.createElement('div')
     card.className = "card"
     card.id = object.id
-    card.innerHTML = `<img src="${object.image}" class="toy-avatar"> <br> ID: ${object.id} <br> Name: ${object.name} <br> Likes: ${object.likes}` 
+    card.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5hWyJoTGgnDgZFPkpS9JY6x6L2MeyJDzfgQ&usqp=CAU" style="width:50px;height:50px;display:block;margin-left:auto;margin-right: auto;width: 25%;"> <br> Like This one <br> <img src="${object.image}" class="toy-avatar"> <br> ID: ${object.id} <br> Name: ${object.name} <br> Likes: ${object.likes}` 
     toyImageContainer.append(card)
 }
   fetch(toyUrl)
@@ -99,7 +99,7 @@ function createCard(object){
         return response.json();
       }).then(function(object) {
         const updateCard = document.getElementById(object.id) 
-        updateCard.innerHTML = `<img src="${object.image}" class="toy-avatar"> <br> ID: ${object.id} <br> Name: ${object.name} <br> Likes: ${object.likes}`
+        updateCard.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5hWyJoTGgnDgZFPkpS9JY6x6L2MeyJDzfgQ&usqp=CAU" style="width:50px;height:50px;display:block;margin-left:auto;margin-right: auto;width: 25%;"> <br> Like This one <br> <img src="${object.image}" class="toy-avatar"> <br> ID: ${object.id} <br> Name: ${object.name} <br> Likes: ${object.likes}`
     
   })  
 
