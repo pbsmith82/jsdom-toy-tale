@@ -47,6 +47,24 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Phillip Smith",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/91P-bZMOgsL._AC_SL1500_.jpg",
+      "likes": 0,
+      "id": 12
+    },
+    {
+      "name": "Candy",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLhGDJ0qDDlgGDHLX2FjtrW8DHLK7OQblNfe024419fmeE0Ifhjn8E_TvTUuPb2ZARRt91g&usqp=CAc",
+      "likes": 0,
+      "id": 13
+    },
+    {
+      "name": "SOnic",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCtr_i7c5q7LHzHLlvJjhacgG23Gwum2bi4wD2Z6ndfrmWjYcSGHWd04Tw3m_U2vv4FeWejmk&usqp=CAc",
+      "likes": "0",
+      "id": 14
     }
   ]
 }
